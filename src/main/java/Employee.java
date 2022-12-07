@@ -21,7 +21,12 @@ public class Employee {
     }
 
     public String getName() {
-        return name;
+        if(name.length() < 6){
+            throw new IllegalArgumentException("Invalid name length");
+        }
+        else {
+            return name;
+        }
     }
 
     public void setName(String name) {
