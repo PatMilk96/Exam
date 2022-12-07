@@ -15,6 +15,12 @@ class EmployeeTest {
         assertEquals("Patrick", employee.getName());
     }
 
+    @Test
+    void employeeNumTest(){
+        Employee employee = new Employee("Patrick", "123456789101112");
+        assertEquals("123456789101112", employee.getEmployeeNumber());
+    }
+
     @AfterEach
     void tearDown() {
     }

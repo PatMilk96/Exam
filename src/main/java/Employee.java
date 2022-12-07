@@ -7,6 +7,14 @@ public class Employee {
         setEmployeeNumber(employeeNumber);
     }
 
+    public String getEmployeeNumber() {
+        return employeeNumber;
+    }
+
+    public void setEmployeeNumber(String employeeNumber) {
+        this.employeeNumber = employeeNumber;
+    }
+
     public String getName() {
         return name;
     }
@@ -15,11 +23,4 @@ public class Employee {
         this.name = name;
     }
 
-    public String getEmployeeNumber() {
-        return employeeNumber;
-    }
-
-    public void setEmployeeNumber(String employeeNumber) {
-        employeeNumber = employeeNumber;
-    }
 }
