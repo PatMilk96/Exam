@@ -5,8 +5,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class EmployeeTestFail {
-    @BeforeEach
-    void setUp() { Employee employee = new Employee("Patrick", "123456789101"); }
 
     @Test
     void employeeNumberFail() {
@@ -17,9 +15,8 @@ class EmployeeTestFail {
 
     @Test
     void employeeNameFail() {
-    }
-
-    @AfterEach
-    void tearDown() {
+        Employee employee = new Employee("Pat", "123456789101");
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, employee::getName);
+        assertEquals("Invalid name length", exception.getMessage());
     }
 }
