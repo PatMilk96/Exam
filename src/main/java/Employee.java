@@ -8,7 +8,12 @@ public class Employee {
     }
 
     public String getEmployeeNumber() {
-        return employeeNumber;
+        if(employeeNumber.length() == 12){
+            return employeeNumber;
+        }
+        else {
+            throw new IllegalArgumentException("Employee Number should be 12 digits long");
+        }
     }
 
     public void setEmployeeNumber(String employeeNumber) {
